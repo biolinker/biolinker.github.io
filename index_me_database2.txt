@@ -1,0 +1,35 @@
+CREATE DATABASE index_me;
+
+CREATE TABLE `index_me`.`user_table` (
+  `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(255) NOT NULL,
+  `last_name` VARCHAR(255) NOT NULL,
+  `username` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `gender` CHAR(1) NOT NULL,
+  `birthdate` DATE NOT NULL,
+  PRIMARY KEY (`user_id`));
+
+  CREATE TABLE `index_me`.`hyperlink_table` (
+  `hyperlink_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `facebook_hyperlink` VARCHAR(255) NULL,
+  `googleplus_hyperlink` VARCHAR(255) NULL,
+  `linkedin_hyperlink` VARCHAR(255) NULL,
+  `twitter_hyperlink` VARCHAR(255) NULL,
+  `youtube_hyperlink` VARCHAR(255) NULL,
+  `instagram_hyperlink` VARCHAR(255) NULL,
+  `user_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`hyperlink_id`),
+  INDEX `user_id_idx` (`user_id` ASC),
+  CONSTRAINT `user_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `index_me`.`user_table` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+
+
+

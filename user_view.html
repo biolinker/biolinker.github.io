@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User View Page</title>
+	<link href="user_view.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<div id="user_information"> 
+	<form action="contact-information.php" method="post">
+		<input type="text" name="firstname" size="20" maxlength="255" placeholder="First Name (Required)"/> 
+		<input type="text" name="lastname" size="20" maxlength="255" placeholder="Last Name (Required)"/>  <br />
+		<input type="text" name="phonenumber" size="20" maxlength="20" placeholder="Phone Number (Optional)"/> <br />
+		<input type="email" name="email" size="30" maxlength="255" placeholder="E-mail (Optional)"/> 
+		<input type="submit" name="submit" value="Save" />
+	</form>
+	</div>
+	<div id="socialmedia_hyperlinks">
+		<p>HERE IS WHERE THE SOCIAL MEDIA ICONS GO...</p>
+	</div>
+	<div id="user_biography">
+		<form action="biography.php" method="post">
+			<p id="biography-text">Biography</p>
+			<textarea name="biography" cols="100" rows="15" placeholder="Write your biography here"></textarea> <br />
+			<input type="submit" name="submit" value="Save" /> 
+		</form>
+	</div>
+	<div id="user_resume">
+		<form action="resume.php" method="post">
+			<p id="resume-text">Resume</p>
+			<textarea name="resume" cols="100" rows="15" placeholder="Copy and paste your resume here"></textarea> <br />
+			<input type="submit" name="resumeBtn" value="Save" /> 
+		</form>
+	</div>
+</body>
+</html>
